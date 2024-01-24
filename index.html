@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Poké API</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- Adicione o link para o Font Awesome (ou faça o download e hospede localmente) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+  <div class="page-container">
+    <div class="container">
+      <h1>Pesquise sobre seu Pokémon favorito</h1>
+      <form id="pokemonForm">
+        <label for="pokemonName">Nome do Pokémon:</label>
+        <div class="input-container">
+          <input type="text" id="pokemonName" placeholder="Insira o nome do Pokémon" required>
+          <button type="reset" id="clearButton" class="clear-button">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <button type="submit">Buscar</button>
+      </form>
+      <div class="pokemonInfo hidden" id="pokemonInfo">
+        <!-- Conteúdo de informações do Pokémon -->
+      </div>
+      <p id="statusMessage" class="hidden">Status: </p>
+      <a href="#" id="helpLink">Ajuda</a>
+    </div>
+
+    <!-- Modal de Ajuda -->
+    <div id="helpModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeHelpModal()">&times;</span>
+        <h2>Ajuda</h2>
+        <p>Digite o nome de um Pokémon no campo de pesquisa e clique em 'Buscar' para obter informações sobre ele.</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </div>
+</body>
+
+</html>
